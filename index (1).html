@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Project</title>
+
+  <!-- Basic reset & starter styles (optional) -->
+  <style>
+    :root { --max: 1000px; --pad: 16px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, Arial, sans-serif; line-height: 1.5; color: #222; }
+    header, footer { background: #111; color: #fff; }
+    header { position: sticky; top: 0; }
+    .container { max-width: var(--max); margin: 0 auto; padding: var(--pad); }
+    nav ul { display: flex; gap: 16px; list-style: none; }
+    nav a { color: #fff; text-decoration: none; opacity: 0.9; }
+    nav a:hover { opacity: 1; text-decoration: underline; }
+
+    main { padding: 32px var(--pad); }
+    .hero { padding: 48px 0; }
+    .hero h1 { font-size: 2rem; margin-bottom: 8px; }
+    .hero p { max-width: 60ch; opacity: 0.9; }
+
+    footer { margin-top: 48px; }
+    footer small { opacity: 0.8; }
+
+    /* Responsive tweak */
+    @media (max-width: 600px) {
+      nav ul { flex-wrap: wrap; }
+      .hero h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <!-- Logo placeholder -->
+          <div style="width:32px;height:32px;background:#fff;border-radius:6px;"></div>
+          <strong>MyBrand</strong>
+        </div>
+
+        <!-- NAV -->
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="home">
+    <section class="container hero">
+      <h1>Welcome to My Project</h1>
+      <p>This is a clean HTML skeleton with header, navigation, main content area, and footer. Start building fast!</p>
+      <button id="ctaBtn" style="margin-top:16px;padding:10px 16px;border:0;border-radius:8px;cursor:pointer;">
+        Get Started
+      </button>
+    </section>
+
+    <section id="features" class="container" style="padding:24px 0;">
+      <h2 style="margin-bottom:8px;">Features</h2>
+      <ul style="margin-left:18px;">
+        <li>Clean, responsive structure</li>
+        <li>Easy to customize</li>
+        <li>Starter CSS & JS hooks</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container" style="padding:24px 0;">
+      <h2 style="margin-bottom:8px;">Contact</h2>
+      <p>Email: you@example.com</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <small>&copy; <span id="year"></span> MyBrand. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Starter JS -->
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Example click handler
+    document.getElementById('ctaBtn').addEventListener('click', () => {
+      alert('Let’s build something awesome!');
+    });
+  </script>
+</body>
+</html>
